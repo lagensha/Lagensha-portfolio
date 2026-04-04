@@ -1,0 +1,127 @@
+
+body {
+  background: linear-gradient(135deg, #181f2a 0%, #23243a 100%);
+  color: #e3dfff;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  letter-spacing: 0.01em;
+  font-size: 1.08rem;
+  align-items: center;
+}
+
+nav {
+  background: linear-gradient(90deg, #34445c 60%, #23243a 100%);
+  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.22);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+  border-bottom: 1.5px solid #23243a;
+  display: flex;
+  align-items: center;
+  padding: 0 2.5rem;
+  min-height: 64px;
+}
+
+.navbar-title {
+  color: #f7f6f9;
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  margin-right: 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  user-select: none;
+} 
+.navbar-title svg {
+  width: 1.6em;
+  height: 1.6em;
+  fill: #875bb9;
+  vertical-align: middle;
+} 
+
+nav a {
+  color: #e3dfff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.08rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  transition: color 0.18s, background 0.18s, box-shadow 0.18s;
+  outline: none;
+  letter-spacing: 0.02em;
+  position: relative;
+  align-items: center;
+  }
+
+nav a:hover::after, nav a:focus::after {
+  width: 100%;
+}
+nav a:hover, nav a:focus {
+  color: #fff;
+  background: #875bb9cc;
+  box-shadow: 0 2px 12px #875bb955;
+  cursor: pointer;
+}
+h1 {
+  color: #ffffff;
+  margin-top: 0;
+  font-family: 'Inter', 'Segoe UI Semibold', Arial, sans-serif;
+  letter-spacing: 0.01em;
+}
+
+h1 {
+  background: linear-gradient(90deg, #cdb4ce 60%, #270525 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 2.7rem;
+  margin-bottom: 0.7rem;
+  font-weight: 800;
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 1.3rem;
+  margin-bottom: 0.7rem;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+p {
+  color: #ffffff;
+  font-size: 1.13rem;
+  line-height: 1.8;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+@media (max-width: 800px) {
+  section {
+    max-width: 98vw;
+    padding: 1.5rem 0.7rem;
+  }
+  nav ul {
+    gap: 1rem;
+    padding: 0 0.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 1.3rem;
+  }
+  h2 {
+    font-size: 1.05rem;
+  }
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  section {
+    padding: 1rem 0.3rem;
+  }
+}
