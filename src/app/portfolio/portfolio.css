@@ -90,12 +90,13 @@ h2 {
   font-size: 30px;
 }
 
-p {
+h3 {
   color: #ffffff;
   font-size: 1.13rem;
   line-height: 1.8;
   font-weight: 400;
   letter-spacing: 0.01em;
+  font-size: 21px;
 }
 
 @media (max-width: 800px) {
