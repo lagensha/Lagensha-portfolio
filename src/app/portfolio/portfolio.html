@@ -1,0 +1,117 @@
+<div class="portfolio-page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="topbar" aria-label="Main navigation">
+        <a class="brand" href="#home" aria-label="Go to home section">
+            <span class="brand-dot"></span>
+            Lagensha Rupasinghe
+        </a>
+        <nav aria-label="Section links">
+            <ul class="nav-list">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#project">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <p class="kicker">Software Engineer</p>
+                <h1>Building modern digital products with clarity and impact.</h1>
+                <p class="hero-summary">
+                    I am Lagensha Rupasinghe, a full-stack developer focused on creating reliable,
+                    scalable, and user-centered applications with Angular and Spring Boot.
+                </p>
+                <div class="home-buttons">
+                    <a href="#project" class="btn-main">Explore Projects</a>
+                    <a href="#contact" class="btn-main btn-alt">Let's Connect</a>
+                </div>
+            </div>
+
+            <div class="picture">
+                <img
+                    class="profile-pic"
+                    src="/asset/profilepic.jpg"
+                    width="420"
+                    height="420"
+                    alt="Portrait of Lagensha Rupasinghe"
+                />
+            </div>
+        </section>
+
+        <section id="about" class="section-block">
+            <div class="about-wrap">
+                <div class="about-intro">
+                    <p class="about-kicker">About</p>
+                    <h2>I turn complex requirements into smooth, human-friendly experiences.</h2>
+                    <p class="about-description">
+                        My approach combines engineering discipline with product thinking. I enjoy
+                        collaborating with teams, understanding business needs, and delivering
+                        software that is secure, maintainable, and delightful to use, with strong
+                        attention to QA and testing quality.
+                    </p>
+
+                    <div class="about-tags" aria-label="Core strengths">
+                        @for (strength of strengths; track strength) {
+                            <span>{{ strength }}</span>
+                        }
+                    </div>
+                </div>
+
+                <div class="about-cards" aria-label="Experience highlights">
+                    <article class="about-card">
+                        <h3>Engineering Focus</h3>
+                        <p>Secure and scalable full-stack systems using Java, Spring Boot, Angular, and SQL databases.</p>
+                    </article>
+                    <article class="about-card">
+                        <h3>Work Style</h3>
+                        <p>Detail-oriented execution, transparent communication, and continuous delivery mindset.</p>
+                    </article>
+                    <article class="about-card">
+                        <h3>Value Delivered</h3>
+                        <p>Fast and reliable web experiences that align technical quality with business outcomes.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="project" class="section-block">
+            <div class="section-head">
+                <p class="section-kicker">Portfolio Work</p>
+                <h2>Featured Projects</h2>
+            </div>
+
+            <div class="project-grid">
+                @for (project of projectHighlights; track project.title) {
+                    <article class="project-card">
+                        <h3>{{ project.title }}</h3>
+                        <p class="project-stack">{{ project.stack }}</p>
+                        <p>{{ project.summary }}</p>
+                    </article>
+                }
+            </div>
+        </section>
+
+        <section id="contact" class="section-block">
+            <div class="section-head">
+                <p class="section-kicker">Get In Touch</p>
+                <h2>Let's build something meaningful.</h2>
+            </div>
+
+            <div class="contact-panel" role="list" aria-label="Contact information">
+                @for (item of contactItems; track item.label) {
+                    <div class="contact-item" role="listitem">
+                        <p class="contact-label">{{ item.label }}</p>
+                        @if (item.href) {
+                            <a [href]="item.href" class="contact-value" target="_blank" rel="noopener noreferrer">{{ item.value }}</a>
+                        } @else {
+                            <p class="contact-value">{{ item.value }}</p>
+                        }
+                    </div>
+                }
+            </div>
+        </section>
+    </main>
+</div>
