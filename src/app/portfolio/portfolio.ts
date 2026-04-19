@@ -42,18 +42,30 @@ export class Portfolio {
       summary:
         'A responsive web-based Point of Sale system designed for fast-food and burger shop operations. This project includes order management, item handling, billing, customer interaction, and real-time UI updates using HTML, CSS, and JavaScript. The system is optimized for ease of use, quick navigation, and efficient restaurant workflow.',
     },
+    {
+      title: 'RouteWise',
+      stack: 'Angular, Spring Boot, MySQL , Rest API',
+      summary:
+       'Smart Bus Tracker for Sri Lanka that provides real-time bus locations and crowd levels (Full/Medium/Empty). Built with Spring Boot and MySQL, with map integration to help users make better travel decisions.',
+    },
+
   ];
 
   readonly contactItems = [
     {
       label: 'Email',
-      value: 'lagensha.rupasinghe@email.com',
-      href: 'mailto:lagensha.rupasinghe@email.com',
+      value: 'lagensharupasinghe47@gmail.com',
+      href: 'mailto:lagensharupasinghe47@gmail.com',
     },
     {
       label: 'LinkedIn',
-      value: 'linkedin.com/in/lagensha-rupasinghe',
-      href: 'https://www.linkedin.com/',
+      value: 'www.linkedin.com/in/lagensha-rupasinghe-6646b5370',
+      href: 'https://www.linkedin.com/in/lagensha-rupasinghe-6646b5370',
+    },
+     {
+      label: 'GitHub',
+      value: 'github.com/lagensha',
+      href: 'https://github.com/lagensha',
     },
     {
       label: 'Location',
