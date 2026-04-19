@@ -19,16 +19,16 @@ export class Portfolio {
 
   readonly projectHighlights = [
     {
-      title: '',
-      stack: 'Angular, Spring Boot, MySQL',
+      title: 'VerBiz',
+      stack: 'Angular, Spring Boot, MySQL , Rest API',
       summary:
-        'A full-stack productivity platform with role-based access, analytics dashboards, and optimized API performance.',
+        'VeriBiz Backend is a Spring Boot service that analyzes business social media accounts to detect fake or suspicious activity. It evaluates engagement, profile data, and activity patterns to generate a trust score and risk level via REST APIs.',
     },
     {
-      title: 'Smart Inventory Portal',
-      stack: 'Angular, Java, REST API',
+      title: 'Grocery-Shop',
+      stack: 'Angular, Java, REST API,MYSQL',
       summary:
-        'An inventory tracking app built for speed and reliability with live status updates and robust validation flows.',
+        'Modern Grocery Shop web application developed to deliver a smooth and efficient online shopping experience. Built with a focus on clean design, user-friendly navigation, and real-world eCommerce functionality. Features include product browsing, category management, shopping cart operations, secure checkout flow, and responsive UI for all devices. Designed to demonstrate full-stack development skills, problem-solving ability, and practical implementation of scalable retail solutions. Ideal for modern digital grocery businesses.',
     },
     {
       title: 'Service Booking Platform',
