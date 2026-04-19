@@ -19,7 +19,7 @@ export class Portfolio {
 
   readonly projectHighlights = [
     {
-      title: 'TaskFlow Manager',
+      title: '',
       stack: 'Angular, Spring Boot, MySQL',
       summary:
         'A full-stack productivity platform with role-based access, analytics dashboards, and optimized API performance.',
