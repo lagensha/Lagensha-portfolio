@@ -1,9 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-portfolio',
-  imports: [NgOptimizedImage],
   templateUrl: './portfolio.html',
   styleUrl: './portfolio.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -13,6 +11,7 @@ export class Portfolio {
     'API Design',
     'Clean Architecture',
     'Responsive Interfaces',
+    'QA and Testing',
     'Performance Tuning',
     'Business Alignment',
     'Team Collaboration',

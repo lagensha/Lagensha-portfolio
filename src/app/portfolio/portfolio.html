@@ -1,73 +1,116 @@
-<link rel="stylesheet" href="portfolio.css">
-<body>
-<nav>
-  <ul style="display: flex; gap: 2rem; list-style: none; padding: 1rem 0; margin: 0;">
-    <li><a routerLink="#home">Home</a></li>
-    <li><a routerLink="#about">About</a></li>
-    <li><a routerLink="#project">Project</a></li>
-    <li><a routerLink="#contact">Contact</a></li>
-  </ul>
-</nav>
-<section id="home">
-    <div style="display: flex; align-items: center; justify-content: space-between; gap: 2.5rem; flex-wrap: wrap;">
-        <div style="flex: 1 1 320px; min-width: 220px;">
-            <h1>Hello I'am Software Engineer</h1>
-            <h2> Full Stack Developer | Business Analyst </h2>
-            <h3>I’m Lagensha Rupasinghe. A passionate Software Engineer specializing in building modern, scalable web applications. I am focused on writing clean, efficient code and continuously improving my skills to contribute effectively in a professional team environment.</h3>
-            <div class="home-buttons" style="margin-top: 2.2rem; display: flex; gap: 1.2rem; flex-wrap: wrap;">
-                <a href="#project" class="btn-main">View My Project</a>
-                <a href="#contact" class="btn-main btn-alt">Contact</a>
+<div class="portfolio-page">
+    <header class="topbar" aria-label="Main navigation">
+        <a class="brand" href="#home" aria-label="Go to home section">
+            <span class="brand-dot"></span>
+            Lagensha Portfolio
+        </a>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#project">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <p class="kicker">Software Engineer</p>
+                <h1>Building modern digital products with clarity and impact.</h1>
+                <p class="hero-summary">
+                    I am Lagensha Rupasinghe, a full-stack developer focused on creating reliable,
+                    scalable, and user-centered applications with Angular and Spring Boot.
+                </p>
+                <div class="home-buttons">
+                    <a href="#project" class="btn-main">Explore Projects</a>
+                    <a href="#contact" class="btn-main btn-alt">Let's Connect</a>
+                </div>
             </div>
-        </div>
-        <div class="picture">
-            <img class="profile-pic" src="/asset/profilepic.jpg" alt="Lagensha Rupasinghe" />
-        </div>
-    </div>
-</section>
-<section   id="about">
-    <div class="about-wrap">
-        <div class="about-intro">
-            <p class="about-kicker">About Me</p>
-            <h2>I build software that feels fast, clear, and useful.</h2>
-            <p class="about-description">I am a full-stack developer who enjoys turning ideas into reliable digital products. My work combines backend architecture, thoughtful UI design, and practical business thinking to create applications that solve real problems.</p>
-            <div class="about-tags" aria-label="Core strengths">
-                <span>Clean Architecture</span>
-                <span>Scalable APIs</span>
-                <span>Responsive UI</span>
-                <span>Problem Solving</span>
-                <span>Team Collaboration</span>
-                <span>Continuous Learning</span>
+
+            <div class="picture">
+                <img
+                    class="profile-pic"
+                    src="/asset/profilepic.jpg"
+                    width="420"
+                    height="420"
+                    alt="Portrait of Lagensha Rupasinghe"
+                />
             </div>
-        </div>
+        </section>
 
-        <div class="about-cards" aria-label="Experience highlights">
-            <article class="about-card">
-                <h3>Engineering Focus</h3>
-                <p>Designing and developing secure full-stack applications with Java, Spring Boot, Angular, MySQL, and REST APIs.</p>
-            </article>
-            <article class="about-card">
-                <h3>How I Work</h3>
-                <p>From idea to deployment: I prioritize clean code, maintainability, and smooth user experience at each step.</p>
-            </article>
-            <article class="about-card">
-                <h3>Career Mindset</h3>
-                <p>Growth-driven, creative, and quality-focused. I enjoy learning quickly and contributing to meaningful products.</p>
-            </article>
-        </div>
-    </div>
-</section>
+        <section id="about" class="section-block">
+            <div class="about-wrap">
+                <div class="about-intro">
+                    <p class="about-kicker">About</p>
+                    <h2>I turn complex requirements into smooth, human-friendly experiences.</h2>
+                    <p class="about-description">
+                        My approach combines engineering discipline with product thinking. I enjoy
+                        collaborating with teams, understanding business needs, and delivering
+                        software that is secure, maintainable, and delightful to use, with strong
+                        attention to QA and testing quality.
+                    </p>
 
-<section>
-    <div id="project">
-	<h2>Project</h2>
-	<p>Showcase your projects here.</p>
-    </div>
-</section>
+                    <div class="about-tags" aria-label="Core strengths">
+                        @for (strength of strengths; track strength) {
+                            <span>{{ strength }}</span>
+                        }
+                    </div>
+                </div>
 
-<section>
-    <div id="contact">
-	<h2>Contact</h2>
-	<p>Provide your contact information here.</p>
-    </div>
-</section>
-</body>
+                <div class="about-cards" aria-label="Experience highlights">
+                    <article class="about-card">
+                        <h3>Engineering Focus</h3>
+                        <p>Secure and scalable full-stack systems using Java, Spring Boot, Angular, and SQL databases.</p>
+                    </article>
+                    <article class="about-card">
+                        <h3>Work Style</h3>
+                        <p>Detail-oriented execution, transparent communication, and continuous delivery mindset.</p>
+                    </article>
+                    <article class="about-card">
+                        <h3>Value Delivered</h3>
+                        <p>Fast and reliable web experiences that align technical quality with business outcomes.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="project" class="section-block">
+            <div class="section-head">
+                <p class="section-kicker">Portfolio Work</p>
+                <h2>Featured Projects</h2>
+            </div>
+
+            <div class="project-grid">
+                @for (project of projectHighlights; track project.title) {
+                    <article class="project-card">
+                        <h3>{{ project.title }}</h3>
+                        <p class="project-stack">{{ project.stack }}</p>
+                        <p>{{ project.summary }}</p>
+                    </article>
+                }
+            </div>
+        </section>
+
+        <section id="contact" class="section-block">
+            <div class="section-head">
+                <p class="section-kicker">Get In Touch</p>
+                <h2>Let's build something meaningful.</h2>
+            </div>
+
+            <div class="contact-panel" role="list" aria-label="Contact information">
+                @for (item of contactItems; track item.label) {
+                    <div class="contact-item" role="listitem">
+                        <p class="contact-label">{{ item.label }}</p>
+                        @if (item.href) {
+                            <a [href]="item.href" class="contact-value" target="_blank" rel="noopener noreferrer">{{ item.value }}</a>
+                        } @else {
+                            <p class="contact-value">{{ item.value }}</p>
+                        }
+                    </div>
+                }
+            </div>
+        </section>
+    </main>
+</div>
